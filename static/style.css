@@ -1,103 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@700;900&display=swap');
+
+:root {
+	--dark-gray: #5a5861;
+	--black: #0a0a0f;
+	--ff-heading: 'Work Sans', sans-serif;
+	--ff-body: 'Roboto', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 body {
+	font-family: var(--ff-body);
+	font-size: 16px;
+
+	display: grid;
+
+	grid-template-rows: 70px 1fr;
+	grid-template-columns: 1fr 200px;
+	height: 100vh;
+	width: 100%;
+
+	color: white;
+	background-color: var(--black);
 }
 
-/*.margin-base-vertical {
-    margin: 40px 0;
+h1, h2, h3 {
+	font-family: var(--ff-heading);
+	font-weight: 600;
 }
-*/
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-family: var(-ff-heading);
+}
+
 .navbar {
-	border-radius: 0;
-	margin-bottom:0;
+	background-color: var(--black);
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 1;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.remove-current-tag {
-	cursor: pointer;
+.content {
+	/* background-color: var(--black); */
+	grid-column: 1 / span 1;
+	grid-row: 2 / span 1;
+
+	padding: 20px;
 }
 
-/*
-Make thing purty on desktops...using bootstrap's breakpoint
-*/
-@media (min-width: 992px) {
-	.navbar {
-		position: fixed;
-		z-index:1;
-		width: 100%;
-	}
-	
-	.navbar-default a.navbar-brand:hover {
-		color:#6AD7E5;
-	}
-	.dropdown .dropdown-menu {
-		max-height: 400px;
-		overflow-y: auto;
-		min-width: 230px;
+.sidebar {
+	/* background-color: var(--dark-gray); */
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+
+	padding: 20px;
+}
+
+
+.plyr{
+    border-radius: 4px;
+		box-shadow: 0 2px 5px rgba(100,100,100,.1);
 	}
 
-	.sidebar {
-		position: absolute;
-		top: 50px;
-		min-height: 100%;
-		right: 0;
-		margin-top: -50px;
-		padding: 0;
-	}
 
-	.sidebar .panel {
-		border-radius: 0;
-		margin: 0;
-		margin-top: 50px;
-	}
+ul.menu {
+	list-style-type: none;
+	font-family: var(--ff-heading);
+	font-weight: 600;
+	text-transform: uppercase;
+}
 
-	.panel .panel-heading {
-		position: fixed;
-		width: 100%;
-		z-index:1;
-		border-top: 1px solid #ddd;
-		border-radius: 0;
-	}
-
-	.panel .panel-body {
-		padding: 40px 0 0 0;
-		margin:0;
-	}
-
-	.panel-body .list-group {
-		margin: 0;
-	}
-
-	.list-group a.list-group-item {
-		border-radius: 0;
-		border: 0;
-		border-bottom: 1px solid #ddd;
-		cursor: pointer;
-	}
-
-	.video-container {
-		margin-top: 80px;
-		padding-right: 0;
-		padding-left: 40px;
-		position: fixed;
-	}
-
-	.gopher-hole {
-		position: fixed;
-		width:211px;
-		height:39px;
-		bottom: 0;
-		right:33%;
-		z-index:10;
-		background: url('/static/gopher-hole.png');
-	}
-
-	.gopher {
-		position: absolute;
-		z-index: 1;
-		bottom: 0px;
-		right: 100%;
-		margin-right: 46px;
-		width: 108px;
-		height: 144px;
-		background: url('/static/gopher.png') no-repeat scroll 0 35px transparent;
-	}
-
+ul.menu li {
+	display: inline-block;
+	margin: 0px 10px;
 }

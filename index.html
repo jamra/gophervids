@@ -2,6 +2,8 @@
 <html ng-app lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>GopherVids</title>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -14,8 +16,6 @@
 
 <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Gophervids ATOM Feed" />
 <link rel="alternate" type="application/rss+xml" title="Gophervids RSS Feed" href="/rss.xml" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
 
@@ -27,22 +27,34 @@
 	<div class="navbar">
 		<span class="logo">
 			<img src="/static/img/Go-Logo_White.svg" height="60px" >
-			<p>GOPHERVIDS</p>
+			GOPHERVIDS
 		</span>
 
-		<ul class="menu">
-			<li><select id="speakers" placeholder="speakers"></li>
-			<li><select id="tags" placeholder="tags"></li>
-		</ul>
+		<!-- <ul class="menu"> -->
+		<!-- 	<li>Speakers</li> -->
+		<!-- 	<li>Tags</li> -->
+		<!-- </ul> -->
 	</div>
 	<div class="content">
-		<h2>Content</h2>
-
 		<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="KdX51QJWQTA"></div>
+
+		<div class="vid-list">
+			<div class="vid-list-column">
+				<h3>Speakers</h3>
+				<div id="speakers"></div>
+			</div>
+			<div class="vid-list-column">
+				<h3>Tags</h3>
+				<div id="tags"></div>
+			</div>
+		</div>
 	</div>
 
 	<div class="sidebar">
-		<h3> Sidebar</h3>
+		<div class="playlist">
+			<div class="playlist__title">playlist</div>
+			<div class="playlist__body">NO PLAYLLIST LOADED</div>
+		</div>
 	</div>
 
 <!-- <nav class="navbar navbar-default" role="navigation"> -->
